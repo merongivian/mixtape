@@ -1,12 +1,9 @@
 require 'test_helper'
 
-describe Mixtape::CLI do
+describe Mixtape::CLI, :vcr do
   describe ".youtube_playlist" do
     it "opens a playlist youtube link" do
-      ids = %w(id_one id_two)
-      pitchfork_playlist_url = "www.youtube_playlist_url..."
-      Mixtape.expects(:pitchfork_playlist).returns(ids)
-      Mixtape::Youtube.expects(:playlist_url).with(ids).returns(pitchfork_playlist_url)
+      pitchfork_playlist_url = "http://www.youtube.com/watch_videos?video_ids=pFf3fNAwJsY,3dgFykz0bNo,TP9luRtEqjc,HxMLzZmZE3I,xGMgwERhfcI,tZ5Mu2gs-M8,KiXqcwljveo,cinJDxLUsNY,fHaL2jwWnl4,3m42g0Bpg7o"
       Launchy.expects(:open).with(pitchfork_playlist_url)
 
       Mixtape::CLI.open_playlist

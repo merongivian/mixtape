@@ -1,18 +1,8 @@
 require 'test_helper'
 
-describe Mixtape::Pitchfork do
+describe Mixtape::Pitchfork, :vcr do
   describe ".best_new_tracks" do
     it "returns a hash with 10 songs from new best tracks" do
-      path = File.expand_path("../..", __FILE__) + '/response/pitchfork/'
-
-      file_first_page = open(path + 'best_new_tracks_1.txt')
-      file_second_page = open(path + 'best_new_tracks_2.txt')
-
-      stub_request(:get, "http://pitchfork.com/reviews/best/tracks/1/")
-        .to_return(file_first_page)
-      stub_request(:get, "http://pitchfork.com/reviews/best/tracks/2/")
-        .to_return(file_second_page)
-
       songs = [
         {
           artist: "Jamie xx",

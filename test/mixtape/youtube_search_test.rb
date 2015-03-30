@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Mixtape::Youtube do
+describe Mixtape::Youtube, :vcr do
   describe ".search_id" do
     it "gets the first url for a search" do
       song = "radiohead karma police"

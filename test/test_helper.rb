@@ -3,7 +3,7 @@ require 'minitest/reporters'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'mocha/mini_test'
-require 'haml'
+require 'webmock/minitest'
 
 reporter_options = { color: true }
 Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]

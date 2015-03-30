@@ -11,7 +11,7 @@ module Mixtape
 
     def self.best_new_tracks_for_page(page_number)
       page = Nokogiri::HTML(
-        Kernel.open("http://pitchfork.com/reviews/best/tracks/#{page_number}/")
+        open("http://pitchfork.com/reviews/best/tracks/#{page_number}/")
       )
       page.css('.object-list > li .info h1 a').map do |node|
         {

@@ -3,15 +3,15 @@ require 'test_helper'
 describe Mixtape::Pitchfork do
   describe ".best_new_tracks" do
     it "returns a hash with 10 songs from new best tracks" do
-      path = File.expand_path("../..", __FILE__) + '/fixtures/pitchfork/'
+      path = File.expand_path("../..", __FILE__) + '/response/pitchfork/'
 
-      file_first_page = open(path + 'best_new_tracks_1.html')
-      file_second_page = open(path + 'best_new_tracks_2.html')
+      file_first_page = open(path + 'best_new_tracks_1.txt')
+      file_second_page = open(path + 'best_new_tracks_2.txt')
 
-      Kernel.expects(:open).with("http://pitchfork.com/reviews/best/tracks/1/")
-        .returns file_first_page
-      Kernel.expects(:open).with("http://pitchfork.com/reviews/best/tracks/2/")
-        .returns file_second_page
+      stub_request(:get, "http://pitchfork.com/reviews/best/tracks/1/")
+        .to_return(file_first_page)
+      stub_request(:get, "http://pitchfork.com/reviews/best/tracks/2/")
+        .to_return(file_second_page)
 
       songs = [
         {

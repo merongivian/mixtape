@@ -3,8 +3,7 @@ require 'launchy'
 module Mixtape
   module CLI
     def self.open_playlist
-      ids = Mixtape.pitchfork_playlist
-      url = Mixtape::Youtube.playlist_url ids
+      url = Mixtape::PlaylistURL.pitchfork
       Launchy.open url
     end
   end

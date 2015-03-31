@@ -4,7 +4,10 @@ require 'open-uri'
 module Mixtape
   module Pitchfork
     def self.best_new_tracks
-      best_new_tracks_for_page(1) + best_new_tracks_for_page(2)
+      best_new_tracks_for_page(1)[0..2] + (2..8).map do |page|
+        random_index = rand(0..4)
+        best_new_tracks_for_page(page)[random_index]
+      end
     end
 
     private
@@ -14,10 +17,10 @@ module Mixtape
         open("http://pitchfork.com/reviews/best/tracks/#{page_number}/")
       )
       page.css('.object-list > li .info h1 a').map do |node|
-        {
-          artist: node.at_css('.artist').content.delete("^a-zA-Z0-9 ").strip,
-          song: node.at_css('.title').content.delete("^a-zA-Z0-9 ").strip
-        }
+        Song.new(
+          node.at_css('.artist').content.delete("^a-zA-Z0-9 ").strip,
+          node.at_css('.title').content.delete("^a-zA-Z0-9/ ").strip
+        )
       end
     end
   end

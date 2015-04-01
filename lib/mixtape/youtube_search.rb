@@ -6,8 +6,8 @@ module Mixtape
 
     def self.video_id(search)
       search_query = search.gsub(/\s+/, "+")
-      metainspector = MetaInspector.new(URL % search_query)
-      links = metainspector.links.raw
+      youtube_metainspector = MetaInspector.new(URL % search_query)
+      links = youtube_metainspector.links.raw
       links.detect { |link| link =~ /watch/ }.gsub("/watch?v=","")
     end
 

@@ -6,6 +6,7 @@ require 'mocha/mini_test'
 require "vcr"
 require "minitest-vcr"
 require "webmock/minitest"
+require 'shoulda/context'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/cassettes'
@@ -16,4 +17,4 @@ end
 MinitestVcr::Spec.configure!
 
 reporter_options = { color: true }
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new(reporter_options)]

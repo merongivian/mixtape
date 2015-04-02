@@ -2,6 +2,7 @@ require "mixtape/version"
 require "mixtape/cli"
 require "mixtape/playlist_url"
 require "mixtape/youtube_search"
+require "mixtape/random_songs"
 require "mixtape/source/pitchfork"
 require "mixtape/source/nme"
 

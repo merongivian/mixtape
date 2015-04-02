@@ -2,21 +2,23 @@ module Mixtape
   module Source
     module Nme
       def self.best_new_tracks
-        nme_metainspector = MetaInspector.new("http://www.nme.com/reviews/onrepeat")
-        links = nme_metainspector.links.raw
-        songs_links = links.select{ |link| link =~ /various-artists/ }
-        ids = songs_links.map{ |link| link.gsub("/reviews/various-artists/","") }
+        ids = pages_ids
+        pages = [0, 2, 4]
 
-        page_one_songs = best_new_tracks_for_page_id(ids[0])
-        page_three_songs = best_new_tracks_for_page_id(ids[2])
-        page_five_songs = best_new_tracks_for_page_id(ids[4])
+        sliced_songs = pages.map{ |page| best_new_tracks_for_page_id(ids.at page) }
 
-        page_one_songs.sample(5) +
-          page_three_songs.sample(3) +
-            page_five_songs.sample(2)
+        random_songs = Mixtape::RandomSongs.new(sliced_songs)
+        random_songs.most_recent_pick(5, by: 3).first(10)
       end
 
       private
+
+      def self.pages_ids
+        nme_metainspector = MetaInspector.new("http://www.nme.com/reviews/onrepeat")
+        links = nme_metainspector.links.raw
+        songs_links = links.select{ |link| link =~ /various-artists/ }
+        songs_links.map{ |link| link.gsub("/reviews/various-artists/","") }
+      end
 
       def self.best_new_tracks_for_page_id(page_id)
         page = Nokogiri::HTML(

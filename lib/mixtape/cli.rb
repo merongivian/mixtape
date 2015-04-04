@@ -16,8 +16,8 @@ module Mixtape
       system "echo '|/`---/--------------------`---|'"
       system "echo '`.___/ /====/ /=//=/ /====/,___/'"
       system "echo '     `--------------------.'"
-      url = Mixtape::PlaylistURL.best_new_tracks(source)
-      Launchy.open url
+      youtube_playlist = Mixtape::YoutubePlaylist.new(source)
+      Launchy.open(youtube_playlist.url)
     end
   end
 end

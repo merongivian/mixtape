@@ -4,8 +4,8 @@ require 'open-uri'
 module Mixtape
   module Source
     module Pitchfork
-      def self.best_new_tracks
-        sliced_songs = (1..8).map { |page| best_new_tracks_for_page(page) }
+      def self.songs
+        sliced_songs = 1.upto(8).map { |page| best_new_tracks_for_page(page) }
         random_songs = Mixtape::RandomSongs.new(sliced_songs)
         random_songs.most_recent_pick(3, by: 1)
       end

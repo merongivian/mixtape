@@ -1,7 +1,9 @@
+require 'pmap'
+
 module Mixtape
   module Source
     module Nme
-      def self.best_new_tracks
+      def self.songs
         ids = pages_ids
         pages = [0, 2, 4]
 

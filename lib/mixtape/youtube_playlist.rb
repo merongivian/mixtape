@@ -10,8 +10,8 @@ module Mixtape
     end
 
     def url
-      songs = @source.best_new_tracks
-      ids = songs.map do |song|
+      songs = @source.songs
+      ids = songs.pmap do |song|
         video_id("#{song.artist} #{song.title}")
       end
       playlist_url ids

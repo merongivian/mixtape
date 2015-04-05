@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe Mixtape::Source::Nme, vcr: { record: :once } do
-  describe ".best_new_tracks" do
+  describe ".songs" do
     let(:first_page_songs) do [
       Mixtape::Song.new("The Maccabees", "'Marks To Prove It'"),
       Mixtape::Song.new("Florence + The Machine", "St Jude"),
@@ -25,7 +25,7 @@ describe Mixtape::Source::Nme, vcr: { record: :once } do
       Mixtape::Song.new("Blur", "Lonesome Street"),
     ] end
 
-    let(:top_ten_tracks) { Mixtape::Source::Nme.best_new_tracks }
+    let(:top_ten_tracks) { Mixtape::Source::Nme.songs }
 
     it "returns 10 songs" do
       top_ten_tracks.length.must_equal 10
@@ -36,7 +36,7 @@ describe Mixtape::Source::Nme, vcr: { record: :once } do
     end
 
     it 'picks them randomly' do
-      more_top_ten_tracks = Mixtape::Source::Nme.best_new_tracks
+      more_top_ten_tracks = Mixtape::Source::Nme.songs
       more_top_ten_tracks.wont_equal top_ten_tracks
     end
   end

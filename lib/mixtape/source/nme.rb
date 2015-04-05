@@ -3,36 +3,27 @@ require 'pmap'
 module Mixtape
   module Source
     module Nme
+      @page_info = Mixtape::MusicBlogInfo.new(
+        url: "http://www.nme.com",
+        tracks_subpath: "/reviews/various-artists"
+      )
+
       def self.songs
-        ids = pages_ids
+        ids = @page_info.lists_links_ids("/reviews/onrepeat")
         pages = [0, 2, 4]
 
-        sliced_songs = pages.map{ |page| best_new_tracks_for_page_id(ids.at page) }
-
+        sliced_songs = pages.map{ |page| tracks_for_page_id(ids.at page) }
         random_songs = Mixtape::RandomSongs.new(sliced_songs)
         random_songs.most_recent_pick(5, by: 3).first(10)
       end
 
       private
 
-      def self.pages_ids
-        nme_metainspector = MetaInspector.new("http://www.nme.com/reviews/onrepeat")
-        links = nme_metainspector.links.raw
-        songs_links = links.select{ |link| link =~ /various-artists/ }
-        songs_links.map{ |link| link.gsub("/reviews/various-artists/","") }
-      end
-
-      def self.best_new_tracks_for_page_id(page_id)
-        page = Nokogiri::HTML(
-          open("http://www.nme.com/reviews/various-artists/#{page_id}")
+      def self.tracks_for_page_id(page_id)
+        @page_info.tracks(
+          page_id: page_id,
+          css_query: '.article_text.columns > .onrepeat strong'
         )
-        page.css('.article_text.columns > .onrepeat').map do |node|
-          song_info = node.at_css('strong').content.strip.split(" - ")
-          Song.new(
-            song_info.first,
-            song_info.last
-          )
-        end
       end
     end
   end

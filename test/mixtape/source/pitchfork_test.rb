@@ -3,11 +3,11 @@ require 'test_helper'
 describe Mixtape::Source::Pitchfork, vcr: { record: :once } do
   describe ".songs" do
     let(:first_page_songs) do [
-      Mixtape::Song.new("iLoveMakonnen", "Whip It Remix ft Migos and Rich the Kid"),
-      Mixtape::Song.new("Cakes Da Killa", "Serve It Up"),
-      Mixtape::Song.new("Jamie xx","Gosh"),
-      Mixtape::Song.new("Prurient","Dragonflies to Sew You Up"),
-      Mixtape::Song.new("Jamie xx","Loud Places ft Romy"),
+      "iLoveMakonnen: \"Whip It (Remix)\" [ft. Migos and Rich the Kid]",
+      "Cakes Da Killa: \"Serve It Up\"",
+      "Jamie xx: \"Gosh\"",
+      "Prurient: \"Dragonflies to Sew You Up\"",
+      "Jamie xx: “Loud Places” [ft. Romy]",
     ] end
 
     let(:top_ten_tracks) { Mixtape::Source::Pitchfork.songs }

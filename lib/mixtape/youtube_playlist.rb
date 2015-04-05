@@ -12,7 +12,7 @@ module Mixtape
     def url
       songs = @source.songs
       ids = songs.pmap do |song|
-        video_id("#{song.artist} #{song.title}")
+        video_id(song)
       end
       playlist_url ids
     end

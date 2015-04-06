@@ -5,7 +5,8 @@ require "mixtape/random_songs"
 require "mixtape/music_blog_info"
 require "mixtape/source/pitchfork"
 require "mixtape/source/nme"
+require "mixtape/source/diy"
+require "mixtape/source/base"
 
 module Mixtape
-  Song = Struct.new(:artist, :title)
 end

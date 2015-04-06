@@ -3,4 +3,5 @@
 $LOAD_PATH.unshift File.expand_path('../../lib/', __FILE__)
 require 'mixtape'
 
-Mixtape::CLI.open_playlist(ARGV[0])
+cli = Mixtape::CLI.new(ARGV[0], 10)
+cli.open_playlist

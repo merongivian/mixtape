@@ -1,18 +1,13 @@
 require 'nokogiri'
 require 'open-uri'
+require_relative 'base'
 
 module Mixtape
   module Source
-    module Pitchfork
-      def self.songs
-        sliced_songs = 1.upto(8).map { |page| tracks_for_page(page) }
-        random_songs = Mixtape::RandomSongs.new(sliced_songs)
-        random_songs.most_recent_pick(3, by: 1)
-      end
-
+    class Pitchfork < Base
       private
 
-      def self.tracks_for_page(page_number)
+      def songs_for_page_id(page_number)
         page_info = Mixtape::MusicBlogInfo.new(
           url: "http://pitchfork.com",
           tracks_subpath: "/reviews/best/tracks"

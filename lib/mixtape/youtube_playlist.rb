@@ -5,24 +5,18 @@ module Mixtape
     class InvalidSource < StandardError; end
     URL = "http://youtube.com"
 
-    def initialize(source)
-      self.source = source
+    def initialize(songs)
+      @songs = songs
     end
 
     def url
-      songs = @source.songs
-      ids = songs.pmap do |song|
+      ids = @songs.pmap do |song|
         video_id(song)
       end
       playlist_url ids
     end
 
     private
-
-    def source=(source)
-      @source = Mixtape::Source.const_get(source.capitalize)
-      rescue NameError; raise InvalidSource
-    end
 
     def video_id(search)
       search_query = search.gsub(/\s+/, "+")

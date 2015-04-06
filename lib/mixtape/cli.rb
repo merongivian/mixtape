@@ -1,8 +1,16 @@
 require 'launchy'
 
 module Mixtape
-  module CLI
-    def self.open_playlist(source)
+  class CLI
+    class InvalidSource < StandardError; end
+
+    def initialize(source_name, number_of_songs)
+      source_constant = Mixtape::Source.const_get(source_name.capitalize)
+      @source = source_constant.new(number_of_songs)
+      rescue NameError; raise InvalidSource
+    end
+
+    def open_playlist
       system "echo '   ____________________________'"
       system "echo ' /|............................|'"
       system "echo '| |:      AwesomeMixtape      :|'"
@@ -16,8 +24,8 @@ module Mixtape
       system "echo '|/`---/--------------------`---|'"
       system "echo '`.___/ /====/ /=//=/ /====/,___/'"
       system "echo '     `--------------------.'"
-      youtube_playlist = Mixtape::YoutubePlaylist.new(source)
-      Launchy.open(youtube_playlist.url)
+      playlist =  Mixtape::YoutubePlaylist.new(@source.songs)
+      Launchy.open(playlist.url)
     end
   end
 end

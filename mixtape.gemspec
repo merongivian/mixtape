@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "nokogiri", "~> 1.6.6.2"
   spec.add_dependency "launchy", "~> 2.4.3"
   spec.add_dependency "pmap", "~> 1.0.2"
+  spec.add_dependency "lolcat", "~> 42.1.0"
   spec.add_development_dependency "minitest-vcr", "~> 1.2.2"
   spec.add_development_dependency "webmock", "~> 1.20.4"
   spec.add_development_dependency "bundler", "~> 1.7"

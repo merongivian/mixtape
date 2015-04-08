@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "lolcat", "~> 42.1.0"
   spec.add_development_dependency "minitest-vcr", "~> 1.2.2"
   spec.add_development_dependency "webmock", "~> 1.20.4"
-  spec.add_development_dependency "bundler", "~> 1.9.0"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.5.1"
   spec.add_development_dependency "mocha", "~> 1.1.0"

@@ -4,7 +4,7 @@ describe Mixtape::Source::Nme, vcr: { record: :once } do
   let(:number_of_songs) { 10 }
   let(:nme) { Mixtape::Source::Nme.new(number_of_songs) }
 
-  describe ".songs" do
+  describe "#songs" do
     let(:first_page_songs) do [
       "The Maccabees - 'Marks To Prove It'",
       "Florence + The Machine - St Jude",

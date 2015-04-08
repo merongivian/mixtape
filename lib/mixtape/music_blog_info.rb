@@ -1,8 +1,8 @@
 module Mixtape
   class MusicBlogInfo
-    def initialize(url:, tracks_subpath:)
-      @url = url
-      @tracks_subpath = tracks_subpath
+    def initialize(options)
+      @url = options[:url]
+      @tracks_subpath = options[:tracks_subpath]
     end
 
     def lists_links_ids(list_index_subpath)
@@ -13,10 +13,10 @@ module Mixtape
       songs_links.map{ |link| link.gsub("#{@tracks_subpath}/","") }
     end
 
-    def tracks(page_id:, css_query:)
-      complete_url = @url + @tracks_subpath + "/#{page_id}"
+    def tracks(options)
+      complete_url = @url + @tracks_subpath + "/#{options[:page_id]}"
       page = Nokogiri::HTML(open complete_url)
-      page.css(css_query).map do |node|
+      page.css(options[:css_query]).map do |node|
         node.content.squeeze(" ").strip
       end
     end

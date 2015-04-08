@@ -4,7 +4,7 @@ describe Mixtape::Source::Pap, vcr: { record: :once } do
   let(:number_of_songs) { 10 }
   let(:pap) { Mixtape::Source::Pap.new(number_of_songs) }
 
-  describe ".songs" do
+  describe "#songs" do
     let(:first_page_songs) do [
       "Rapsody ft. Merna – “Don’t Need It” (Prod. by Young Guru)",
       "Stream Kevin Garrett’s “Mellow Drama” EP",

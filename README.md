@@ -1,4 +1,5 @@
 # Mixtape
+[![Build Status](https://travis-ci.org/merongivian/mixtape.svg)](https://travis-ci.org/mixtape/)
 
 TODO: Write a gem description
 

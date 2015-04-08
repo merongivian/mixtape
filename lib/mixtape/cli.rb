@@ -21,15 +21,11 @@ module Mixtape
     private
 
     def awesome_output
-      num_of_spaces = (26 - @source_name.length)/2
-      spaces = " " * num_of_spaces
-      title = spaces + @source_name + spaces
-      mixtape_title = "| |:#{title} :|"
       tape = <<-TAPE
          ____________________________
        /|............................|
       | |:      AwesomeMixtape      :|
-      #{mixtape_title}
+      #{cassete_title}
       | |:     ,-.   _____   ,-.    :|
       | |:    ( `)) [_____] ( `))   :|
       |v|:     `-`   , , ,   `-`    :|
@@ -42,6 +38,14 @@ module Mixtape
       TAPE
 
       system "echo '#{tape}' | lolcat --animate"
+    end
+
+    def cassete_title
+      num_of_spaces = (26 - @source_name.length)/2
+      spaces = " " * num_of_spaces
+      title = spaces + @source_name + spaces
+      centered_title = @source_name.length.even? ? title.chop : title
+      "| |:#{centered_title} :|"
     end
   end
 end

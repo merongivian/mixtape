@@ -8083,4 +8083,82 @@ http_interactions:
       string: ''
     http_version: 
   recorded_at: Wed, 08 Apr 2015 14:06:13 GMT
+- request:
+    method: get
+    uri: http://youtube.com/results?search_query=ayicho%20popo%20dsfsd%20asdf%20asdf%20adsdsa
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetaInspector/4.4.1 (+https://github.com/jaimeiniesta/metainspector)
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 08 Apr 2015 16:57:14 GMT
+      Server:
+      - gwiseguy/2.0
+      Location:
+      - http://www.youtube.com/results?search_query=ayicho+popo+dsfsd+asdf+asdf+adsdsa
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 80:quic,p=0.5
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 16:57:14 GMT
+- request:
+    method: get
+    uri: http://youtube.com/results?search_query=oasis%20-%20wonderwall
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetaInspector/4.4.1 (+https://github.com/jaimeiniesta/metainspector)
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 08 Apr 2015 16:57:14 GMT
+      Server:
+      - gwiseguy/2.0
+      Location:
+      - http://www.youtube.com/results?search_query=oasis+-+wonderwall
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 80:quic,p=0.5
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 16:57:14 GMT
 recorded_with: VCR 2.9.3

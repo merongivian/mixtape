@@ -12,7 +12,8 @@ describe Mixtape::Source::Yvynyl, vcr: { record: :once } do
       "Dive In - Eighteen",
       "Bully - Milkman",
       "Alpine - Foolish",
-      "Postäal - Don’t Let Go",
+      "Postäal - Don’t Let Go",
+      "solhee - 안읽씹",
       "Makeup and Vanity Set - Hand in Hand",
       "Heron Oblivion - The Desert",
       "Feivel - Already Standing"

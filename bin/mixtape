@@ -3,5 +3,11 @@
 $LOAD_PATH.unshift File.expand_path('../../lib/', __FILE__)
 require 'mixtape'
 
-cli = Mixtape::CLI.new(ARGV[0], 10)
-cli.open_playlist
+source = ARGV[0] || Mixtape::Source.constants.sample.to_s
+
+begin
+  cli = Mixtape::CLI.new(source, 10)
+  cli.open_playlist
+rescue Mixtape::CLI::InvalidSource
+  system "echo 'We can’t create a playlist for #{source}, yet...'"
+end

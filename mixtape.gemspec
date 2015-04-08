@@ -8,8 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = Mixtape::VERSION
   spec.authors       = ["Jose Añasco"]
   spec.email         = ["joseanasco1@gmail.com"]
-  spec.summary       = %q{curated music playlists directly to your browser}
-  spec.homepage      = ""
+  spec.description   = %q{Curated music playlists directly to your browser}
+  spec.summary       = "Create youtube playlists from the command line, "\
+                       "choose your favorite music blog and enjoy!!"
+  spec.homepage      = "https://github.com/merongivian/mixtape"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

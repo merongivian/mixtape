@@ -10603,4 +10603,186 @@ http_interactions:
         bGwsICcnKTt9PC9zY3JpcHQ+CjwvYm9keT48L2h0bWw+Cgo=
     http_version: 
   recorded_at: Tue, 07 Apr 2015 15:53:26 GMT
+- request:
+    method: get
+    uri: http://youtube.com/results?search_query=oasis%20-%20wonderwall
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetaInspector/4.4.1 (+https://github.com/jaimeiniesta/metainspector)
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 08 Apr 2015 13:57:50 GMT
+      Server:
+      - gwiseguy/2.0
+      Location:
+      - http://www.youtube.com/results?search_query=oasis+-+wonderwall
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 80:quic,p=0.5
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:57:50 GMT
+- request:
+    method: get
+    uri: http://youtube.com/results?search_query=blur%20-%20song%202
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetaInspector/4.4.1 (+https://github.com/jaimeiniesta/metainspector)
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 08 Apr 2015 13:57:50 GMT
+      Server:
+      - gwiseguy/2.0
+      Location:
+      - http://www.youtube.com/results?search_query=blur+-+song+2
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 80:quic,p=0.5
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:57:50 GMT
+- request:
+    method: get
+    uri: http://www.youtube.com/results?search_query=radiohead%20-%20karma%20police
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetaInspector/4.4.1 (+https://github.com/jaimeiniesta/metainspector)
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 08 Apr 2015 14:05:07 GMT
+      Server:
+      - gwiseguy/2.0
+      Content-Type:
+      - text/html; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
+      P3p:
+      - CP="This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en
+        for more info."
+      Content-Length:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://www.youtube.com/results?search_query=radiohead+-+karma+police
+      Expires:
+      - Tue, 27 Apr 1971 19:44:06 EST
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - VISITOR_INFO1_LIVE=EnqtgGHGtEM; expires=Tue, 08-Dec-2015 01:58:07 GMT; path=/;
+        domain=.youtube.com; HttpOnly
+      - YSC=jPAP3rEyxfQ; path=/; domain=.youtube.com; HttpOnly
+      Alternate-Protocol:
+      - 80:quic,p=0.5
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 14:05:08 GMT
+- request:
+    method: get
+    uri: http://www.youtube.com/results?search_query=oasis%20-%20wonderwall
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetaInspector/4.4.1 (+https://github.com/jaimeiniesta/metainspector)
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 08 Apr 2015 14:05:07 GMT
+      Server:
+      - gwiseguy/2.0
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '0'
+      P3p:
+      - CP="This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en
+        for more info."
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://www.youtube.com/results?search_query=oasis+-+wonderwall
+      X-Xss-Protection:
+      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
+      Content-Type:
+      - text/html; charset=utf-8
+      Expires:
+      - Tue, 27 Apr 1971 19:44:06 EST
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - VISITOR_INFO1_LIVE=I0Vc1wsqE_s; expires=Tue, 08-Dec-2015 01:58:07 GMT; path=/;
+        domain=.youtube.com; HttpOnly
+      - YSC=NZBJnc20PMc; path=/; domain=.youtube.com; HttpOnly
+      Alternate-Protocol:
+      - 80:quic,p=0.5
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 14:05:08 GMT
 recorded_with: VCR 2.9.3

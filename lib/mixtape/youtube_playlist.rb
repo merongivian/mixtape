@@ -1,5 +1,3 @@
-require 'metainspector'
-
 module Mixtape
   class YoutubePlaylist
     class InvalidSource < StandardError; end

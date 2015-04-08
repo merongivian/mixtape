@@ -1,6 +1,3 @@
-require 'pmap'
-require_relative 'base'
-
 module Mixtape
   module Source
     class Nme < Base

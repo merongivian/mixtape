@@ -1,5 +1,3 @@
-require 'launchy'
-
 module Mixtape
   class CLI
     class InvalidSource < StandardError; end

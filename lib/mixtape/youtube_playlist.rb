@@ -10,9 +10,11 @@ module Mixtape
     end
 
     def url
+      #TODO deal with imposible searches in each source before sending them to youtube
+      #, until then i'll use compact and return less songs
       ids = @songs.pmap do |song|
         video_id(song)
-      end
+      end.compact
       playlist_url ids
     end
 
@@ -23,7 +25,8 @@ module Mixtape
       search_url = URL + "/results?search_query=" + search_query
       youtube_metainspector = MetaInspector.new(search_url)
       links = youtube_metainspector.links.raw
-      links.detect { |link| link =~ /watch/ }.gsub("/watch?v=","")
+      video_link = links.detect { |link| link =~ /watch/ }
+      video_link.gsub("/watch?v=","") unless video_link.nil?
     end
 
     def playlist_url(video_ids)

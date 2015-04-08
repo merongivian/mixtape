@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jose Añasco"]
   spec.email         = ["joseanasco1@gmail.com"]
   spec.description   = %q{Curated music playlists directly to your browser}
-  spec.summary       = "Create youtube playlists from the command line, "\
+  spec.summary       = "Create music youtube playlists from the command line, "\
                        "choose your favorite music blog and enjoy!!"
   spec.homepage      = "https://github.com/merongivian/mixtape"
   spec.license       = "MIT"
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "lolcat", "~> 42.1.0"
   spec.add_development_dependency "minitest-vcr", "~> 1.2.2"
   spec.add_development_dependency "webmock", "~> 1.20.4"
-  spec.add_development_dependency "bundler", "~> 1.7"
+  spec.add_development_dependency "bundler", "~> 1.9.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.5.1"
   spec.add_development_dependency "mocha", "~> 1.1.0"

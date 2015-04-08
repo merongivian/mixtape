@@ -11,7 +11,7 @@ module Mixtape
       end
 
       def songs
-        sliced_songs = pages_ids.map{ |id| songs_for_page_id(id) }
+        sliced_songs = pages_ids.pmap{ |id| songs_for_page_id(id) }
         random_songs = Mixtape::RandomSongs.new(sliced_songs)
         random_songs.pick_by(1)
       end

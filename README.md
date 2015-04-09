@@ -1,27 +1,46 @@
 # Mixtape
 [![Build Status](https://travis-ci.org/merongivian/mixtape.svg)](https://travis-ci.org/mixtape/)
 
-TODO: Write a gem description
+If you love finding new music, but you hate going trough music blogs, this gem is for you!!!
+
+![](http://38.media.tumblr.com/tumblr_m2gjs94p1s1qdflgdo1_500.gif)
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'mixtape'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install it from the command line
 
     $ gem install mixtape
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply type `mixtape` on the terminal and you'll get a youtube playlist from a random blog
+
+..or get one from the blogs available
+
+    $ mixtape 'pap'
+
+## Music Blogs
+
+Currently you can create awesome playlists from the current sources:
+
+[NME](www.nme.com) => 'nme'
+[Pitchfork](www.pitchfork.com) => 'pitchfork'
+[DIY Magazine](www.diymag.com) => 'diy'
+[Indie Shuffle](www.indieshuffle.com) => 'indieshuffle'
+[Stereogum](www.stereogum.com) => 'stereogum'
+[Pigeons and Planes](www.pigeonsandplanes.com) => 'pap'
+[Yvynyl](www.yvynyl.com) => 'yvynyl'
+
+## How it Works
+
+Under the hood, this gem fetches top new tracks by scraping the music blog.
+It picks each song randomly, so you'll never get the same playlist
+
+## TODO
+
+- Improve tracks searching
+- Add new sources
+- Improve command line with new options
 
 ## Contributing
 

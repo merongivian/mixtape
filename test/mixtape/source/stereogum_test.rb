@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'test_helper'
 
-describe Mixtape::Source::Stereogum, vcr: { record: :once } do
+describe Mixtape::Source::Stereogum, :vcr do
   let(:number_of_songs) { 10 }
   let(:stereogum) { Mixtape::Source::Stereogum.new(number_of_songs) }
 

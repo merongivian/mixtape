@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Mixtape::Source::Indieshuffle, vcr: { record: :once } do
+describe Mixtape::Source::Indieshuffle, :vcr do
   let(:number_of_songs) { 10 }
   let(:indieshuffle) { Mixtape::Source::Indieshuffle.new(number_of_songs) }
 

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Mixtape::YoutubePlaylist, :vcr do
+describe Mixtape::YoutubePlaylist, vcr: { record: :once } do
   describe "#url" do
     it "returns a youtube url for songs" do
       playlist_url = "http://youtube.com/watch_videos?video_ids=" \

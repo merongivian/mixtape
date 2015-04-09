@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'test_helper'
 
 describe Mixtape::Source::Stereogum, vcr: { record: :once } do

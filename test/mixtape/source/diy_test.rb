@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'test_helper'
 
 describe Mixtape::Source::Diy, vcr: { record: :once } do

@@ -23,13 +23,13 @@ Simply type `mixtape` on the terminal and you'll get a youtube playlist from a r
 
 Currently you can create awesome playlists from the current sources:
 
-[NME](www.nme.com) => 'nme'
-[Pitchfork](www.pitchfork.com) => 'pitchfork'
-[DIY Magazine](www.diymag.com) => 'diy'
-[Indie Shuffle](www.indieshuffle.com) => 'indieshuffle'
-[Stereogum](www.stereogum.com) => 'stereogum'
-[Pigeons and Planes](www.pigeonsandplanes.com) => 'pap'
-[Yvynyl](www.yvynyl.com) => 'yvynyl'
+- [NME](http://www.nme.com) => 'nme'
+- [Pitchfork](http://www.pitchfork.com) => 'pitchfork'
+- [DIY Magazine](http://www.diymag.com) => 'diy'
+- [Indie Shuffle](http://www.indieshuffle.com) => 'indieshuffle'
+- [Stereogum](http://www.stereogum.com) => 'stereogum'
+- [Pigeons and Planes](http://www.pigeonsandplanes.com) => 'pap'
+- [Yvynyl](http://www.yvynyl.com) => 'yvynyl'
 
 ## How it Works
 

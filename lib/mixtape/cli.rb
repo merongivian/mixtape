@@ -2,6 +2,8 @@ module Mixtape
   class CLI
     class InvalidSource < StandardError; end
 
+    attr_reader :source
+
     def initialize(source_name, number_of_songs)
       source_constant = Mixtape::Source.const_get(source_name.capitalize)
       @source = source_constant.new(number_of_songs)

@@ -3,7 +3,7 @@
 $LOAD_PATH.unshift File.expand_path('../../lib/', __FILE__)
 require 'mixtape'
 
-source = ARGV[0] || Mixtape::Source.constants.sample.to_s
+source = ARGV[0] || (Mixtape::Source.constants - [:Base]).sample.to_s
 
 begin
   cli = Mixtape::CLI.new(source, 10)

@@ -1,5 +1,5 @@
 # Mixtape
-[![Build Status](https://travis-ci.org/merongivian/mixtape.svg)](https://travis-ci.org/mixtape/)
+[![Build Status](https://travis-ci.org/merongivian/mixtape.svg)](https://travis-ci.org/merongivian/mixtape/)
 
 If you love finding new music, but you hate going trough music blogs, this gem is for you!!!
 
@@ -33,7 +33,7 @@ Currently you can create awesome playlists from the current sources:
 
 ## How it Works
 
-Under the hood, this gem fetches top new tracks by scraping the music blog.
+Under the hood, this gem fetches top new tracks by scraping a music blog.
 It picks each song randomly, so you'll never get the same playlist
 
 ## TODO

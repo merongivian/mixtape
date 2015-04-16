@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'test_helper'
 
-describe Mixtape::Source::Pap, vcr: { record: :once } do
+describe Mixtape::Source::Pap, :vcr do
   let(:number_of_songs) { 10 }
   let(:pap) { Mixtape::Source::Pap.new(number_of_songs) }
 

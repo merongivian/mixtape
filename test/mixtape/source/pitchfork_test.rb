@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'test_helper'
 
-describe Mixtape::Source::Pitchfork, vcr: { record: :once } do
+describe Mixtape::Source::Pitchfork, :vcr do
   let(:number_of_songs) { 10 }
   let(:pitchfork) { Mixtape::Source::Pitchfork.new(number_of_songs) }
 

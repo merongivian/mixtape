@@ -11,7 +11,7 @@ describe Mixtape::YoutubePlaylist, :vcr do
                "blur - song 2"]
 
       youtube_playlist = Mixtape::YoutubePlaylist.new(songs)
-      youtube_playlist.url.must_equal playlist_url
+      value(youtube_playlist.url).must_equal playlist_url
     end
 
     it "skips a song if the search returns nothing" do
@@ -21,7 +21,7 @@ describe Mixtape::YoutubePlaylist, :vcr do
                "ayicho popo dsfsd asdf asdf adsdsa"]
 
       youtube_playlist = Mixtape::YoutubePlaylist.new(songs)
-      youtube_playlist.url.must_equal playlist_url
+      value(youtube_playlist.url).must_equal playlist_url
     end
   end
 end

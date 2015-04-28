@@ -34,22 +34,22 @@ describe Mixtape::RandomSongs do
     let(:picked_songs) { random_songs.pick_by 2 }
 
     it "picks 6 songs from the entire list" do
-      picked_songs.length.must_equal 6
+      value(picked_songs.length).must_equal 6
     end
 
     it "picks 2 songs from the first section" do
       intersection = picked_songs & first_page_songs
-      intersection.length.must_equal 2
+      value(intersection.length).must_equal 2
     end
 
     it "picks 2 songs from the second section" do
       intersection = picked_songs & second_page_songs
-      intersection.length.must_equal 2
+      value(intersection.length).must_equal 2
     end
 
     it "picks 2 songs from the third section" do
       intersection = picked_songs & third_page_songs
-      intersection.length.must_equal 2
+      value(intersection.length).must_equal 2
     end
   end
 end

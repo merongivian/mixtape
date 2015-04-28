@@ -6,7 +6,7 @@ describe Mixtape::Source::Base do
       class FirstSource < Mixtape::Source::Base; end
       pages_ids = FirstSource.new(3).pages_ids
 
-      pages_ids.must_equal [1, 2, 3]
+      value(pages_ids).must_equal [1, 2, 3]
     end
 
     it "raises an error if number of songs is not equal to number of pages" do
@@ -17,7 +17,7 @@ describe Mixtape::Source::Base do
       end
 
       error = ->{ SecondSource.new(3) }.must_raise ArgumentError
-      error.message.must_equal 'Number of songs must equal the number of pages'
+      value(error.message).must_equal 'Number of songs must equal the number of pages'
     end
   end
 

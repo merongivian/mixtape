@@ -32,7 +32,7 @@ describe Mixtape::Source::Nme, :vcr do
     let(:top_ten_tracks) { nme.songs }
 
     it "returns 10 songs" do
-      top_ten_tracks.length.must_equal 10
+      value(top_ten_tracks.length).must_equal 10
     end
 
     it "takes songs them from nme's best new tracks" do
@@ -41,7 +41,7 @@ describe Mixtape::Source::Nme, :vcr do
 
     it 'picks them randomly' do
       more_top_ten_tracks = nme.songs
-      more_top_ten_tracks.wont_equal top_ten_tracks
+      value(more_top_ten_tracks).wont_equal top_ten_tracks
     end
   end
 end
